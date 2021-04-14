@@ -13,14 +13,14 @@ read -p "We hate to ask but, how old are you? >> " age
 	if [ $age -lt 21 ]; then
 		printf "\n"
 		sleep 1
-		echo "You are NOT of legal age to smoke in the U.S. #sorrynotsorry!"
+		echo -n "You are NOT of legal age to smoke in the U.S. #sorrynotsorry!"
 		sleep 3
 		printf "\n"
                 echo "Politely kicking you out... *ahem*"
 		echo "We mean, exiting program..."
 		printf "\n"
 		sleep 4
-	exit
+		exit
 	elif [ $age -ge 21 ]; then
 		printf "\n"
 		sleep 1
