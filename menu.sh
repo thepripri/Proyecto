@@ -71,6 +71,8 @@ if [ "$response" = "y" ]; then
 	echo "Currently hosting the Kaloud Krysalis Monarch Collection:"
 	printf "\n"
 	sleep 2
+	while true
+	do
 	PS3="Please select a hookah (or some hookahs): "
 	hookah=("Anahata Edition" "Illuminate Edition" "Hayat Edition" "Shakti Edition" "Astral Edition" "Done" "Quit")
 	select fav in "${hookah[@]}"; do
@@ -109,6 +111,7 @@ if [ "$response" = "y" ]; then
 	*) echo "$REPLY is not a valid option.";;
 
 	esac
+	done
 	done
 
 # If User does not want to buy a hookah:
