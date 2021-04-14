@@ -40,6 +40,7 @@ echo "Username:"
 read username
 echo "Password:"
 read password
+clear
 	if [[ ( $username == "admin" && $password == "pass" ) ]]; then
 		sleep 1
 		printf "\n"
