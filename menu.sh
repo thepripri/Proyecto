@@ -111,8 +111,8 @@ if [ "$response" = "y" ]; then
 	*) echo "$REPLY is not a valid option.";;
 
 	esac
-	done
-	done
+done
+done
 
 # If User does not want to buy a hookah:
 elif [ "$response" = "n" ] ; then
