@@ -112,8 +112,8 @@ if [ "$response" = "y" ]; then
 	*) echo "$REPLY is not a valid option.";;
 
 	esac
-done
-done
+
+
 
 # If User does not want to buy a hookah:
 elif [ "$response" = "n" ] ; then
@@ -170,4 +170,5 @@ elif [ "$response" = "n" ] ; then
 		else
 		echo "Please decide - yay or nay? We don't have all day."
 fi
-testing
+done
+done
