@@ -168,3 +168,22 @@ elif [ "$response" = "n" ] ; then
 		else
 		echo "Please decide - yay or nay? We don't have all day."
 fi
+
+# ----- Payment Section -------
+echo "Would you like to pay by cash or Card?"
+echo "For cash -  Enter 1"
+echo "For card - Enter 2"
+echo "                           "
+read -p "Please Select You Payment Methoth (1-2) >> "  cashORcard
+echo "                           "
+echo "You have chosen $cashORcard"
+#############################
+if [[ $cashORcard ==  2  ]]
+then
+read -p "Please Enter your Debit or credit card number >> " cardNumber
+read -p "Please Enter Expiration date of the card >> " expireDate
+read -p "Please Enter cvv number >> " cvvNum
+echo "Please wait we are verifying you card ................"
+sleep 4
+echo " Your card has been verified. Please follow the instruction on the screen"
+fi
