@@ -60,7 +60,15 @@ clear
 	exit
 	fi
 
+clear
 
+printf "\n"
+echo "====================================================================="
+echo "******* WARNING: This product contains nicotine. *******"
+echo "*******    Nicotine is an addictive chemical. *******"
+echo "====================================================================="
+printf "\n"
+printf "\n"
 # Display Hookahs Menu Prompt
 read -p "Would you like to purchase a high-end hookah today? (y/n) >> " response
 if [ "$response" = "y" ]; then
