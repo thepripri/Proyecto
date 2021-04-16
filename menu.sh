@@ -39,7 +39,7 @@ printf "\n"
 echo "Username:"
 read username
 echo "Password:"
-read password
+read -s password
 clear
 	if [[ ( $username == "admin" && $password == "pass" ) ]]; then
 		sleep 1
@@ -168,22 +168,80 @@ elif [ "$response" = "n" ] ; then
 		else
 		echo "Please decide - yay or nay? We don't have all day."
 fi
+ ----- Payment Section -------
+echo "Proceeding to checkout..."
+sleep 3
+echo "==== 3-STEP CHECKOUT ===="
+printf "\n"
+echo "1) BILLING/SHIPPING INFORMATION"
+# echo/read -p First Name* Last Name* Street Address* Apt/Suite/Other City Sta>
+printf "\n"
+printf "\n"
+#################
+echo "2) SHIPPING METHOD"
+        printf "\n"
+        echo "   UPS (UPS Ground)  -  G"
+        echo "   USPS (Priority Mail)  -  P"
+        echo "           "
+                read -p "   Please select your shipping method preference: UPS>
+                echo "           "
+                if [ "$shipment" = "g" ]; then
+                        echo "    You selected UPS (UPS Ground) Shipping confi>
+                                sleep 1
+                elif [ "$shipment" = "p" ]; then
+                        echo "    You selected USPS (Priority Mail) Shipping!"
+                                sleep 1
+                fi
 
-# ----- Payment Section -------
-echo "Would you like to pay by cash or Card?"
-echo "For cash -  Enter 1"
-echo "For card - Enter 2"
+
+# PAYMENT SECTION - YASSSSSSSSSSS $$$$$$$$$
+printf "\n"
+echo "3) PAYMENT"
+echo "We kindly only accept Credit Card Payments at this time."
+echo " - 1 -  American Express"
+echo " - 2 -  VISA"
+echo " - 3 -  MasterCard"
+echo " - 4 -  Discover"
 echo "                           "
-read -p "Please Select You Payment Methoth (1-2) >> "  cashORcard
+read -p "Please select your payment method (1-4) >> "  card
 echo "                           "
-echo "You have chosen $cashORcard"
-#############################
-if [[ $cashORcard ==  2  ]]
-then
-read -p "Please Enter your Debit or credit card number >> " cardNumber
-read -p "Please Enter Expiration date of the card >> " expireDate
-read -p "Please Enter cvv number >> " cvvNum
-echo "Please wait we are verifying you card ................"
+echo "You have chosen $card"
+        if [[ $card ==  1 ]]; then
+                echo "     "
+        elif [[ $card == 2 ]]; then
+                echo "     "
+        elif [[ $card == 3 ]]; then
+                echo "     "
+        elif [[ $card == 4 ]]; then
+                echo "     "
+        fi
+
+read -p "Credit Card Number >> " cardNumber
+read -p "Name On Card >> " name
+read -p "Expiration Date >> " expireDate
+read -p "Security Code >> " cvvNum
+echo "Verifying credit card information..."
+sleep 2
+echo " Your card has been verified!"
+printf "\n"
+printf "\n"
+read -p "PRESS ENTER TO PLACE ORDER >> " ENTER
+sleep 3
+printf "\n"
+printf "\n"
+printf "\n"
+echo "Your order has been placed! Please check your e-mail for a confirmation."
+sleep 2
+printf "\n"
+printf "\n"
+printf "\n"
+echo "          We LOVE being Stuck in the (Hookah) Clouds with you! THANK YOU>
+printf "\n"
+printf "\n"
+printf "\n"
+sleep 1
+echo "Exiting..."
+printf "\n"
+printf "\n"
+printf "\n"
 sleep 4
-echo " Your card has been verified. Please follow the instruction on the screen"
-fi
